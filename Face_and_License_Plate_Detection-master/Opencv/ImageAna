@@ -1,0 +1,8 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+img = cv2.imread('puppy.jpg',cv2.IMREAD_UNCHANGED)
+plt.imshow(img, cmap='gray' , interpolation='bicubic')
+plt.plot([0,0] , [100,600], 'c', linewidth=10)
+plt.show()
+cv2.imwrite('watchgray.png',img)
